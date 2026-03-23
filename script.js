@@ -155,7 +155,7 @@ function createStartScreen() {
                 Sign in to sync your case files and preserve your psychological inventory across incidents.
             </p>
             <button class="primary-btn" onclick="signIn()">
-                <span>Sign in to access secure terminals</span>
+                <span>Sign in With google</span>
             </button>
         `;
     } else {
