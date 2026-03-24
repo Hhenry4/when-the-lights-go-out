@@ -579,7 +579,7 @@ CRITICAL RULES:
 The Detective asks: "${question}"`;
 
     try {
-        const response = await fetch('http://localhost:3000/api/interrogate', {
+        const response = await fetch('https://when-the-lights-go-out.onrender.com/api/interrogate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt })
