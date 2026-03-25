@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When the Lights Go Out</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD02FKVHHP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FD02FKVHHP');
+    </script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="noise-overlay"></div>
+    <div id="app"></div>
+    
+    <!-- Inline Module to load Firebase cleanly, bypassing local file CORS issues for modules -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCw-P2rMRqqi1oNrRBCFC92-SjG4J3OZNI",
+            authDomain: "culinary-crimes.firebaseapp.com",
+            databaseURL: "https://culinary-crimes-default-rtdb.firebaseio.com",
+            projectId: "culinary-crimes",
+            storageBucket: "culinary-crimes.firebasestorage.app",
+            messagingSenderId: "152115754914",
+            appId: "1:152115754914:web:60f2c4767dfa426265e4fb",
+            measurementId: "G-FD02FKVHHP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        
+        window.auth = getAuth(app);
+        window.db = getFirestore(app);
+        window.provider = new GoogleAuthProvider();
+        
+        // Export needed functions for the game script
+        window.firebaseAPI = {
+            signInWithPopup,
+            onAuthStateChanged,
+            signOut,
+            doc,
+            setDoc,
+            getDoc
+        };
+
+        // Notify the main script that Firebase is completely loaded
+        window.dispatchEvent(new Event('firebase-ready'));
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
