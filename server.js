@@ -14,10 +14,7 @@ if (!GEMINI_API_KEY) {
     process.exit(1);
 }
 
-// ============================================================
-// SECRETS — This data never leaves the server.
-// The browser only ever receives public (sanitized) versions.
-// ============================================================
+
 const mysteries = [
     {
         id: 'm1',
