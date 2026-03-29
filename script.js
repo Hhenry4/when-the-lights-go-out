@@ -661,8 +661,8 @@ function customConfirm(title, message, proceedText = "PROCEED") {
 // Accusation is verified server-side — the browser never knows killerId.
 window.accuse = async function(suspectId) {
     const isConfirmed = await customConfirm(
-        "Final Accusation", 
-        `Are you absolutely sure you want to accuse this suspect?<br><br>You only have <b style="color:var(--accent-gold)">${state.guessesRemaining}</b> guesses remaining.<br>If you hit 0, you lose the case!`,
+        "confirmation", 
+        `Are you sure you want to accuse this suspect?<br><br>You only have <b style="color:var(--accent-gold)">${state.guessesRemaining}</b> guesses remaining.<br>If you hit 0, you lose the case!`,
         "ACCUSE SUSPECT"
     );
     
