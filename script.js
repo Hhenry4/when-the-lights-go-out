@@ -448,7 +448,7 @@ function showLeaderboard() {
                 <div class="lb-stats-header">Performance</div>
             </div>
             <div id="leaderboard-list">Loading real-time rankings...</div>
-            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px; font-family: 'Inter', sans-serif;" onclick="this.parentElement.parentElement.remove()">Close Archives</button>
+            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px; font-family: 'Inter', sans-serif;" onclick="this.parentElement.parentElement.remove()">Close </button>
         </div>
     `;
     document.body.appendChild(modal);
