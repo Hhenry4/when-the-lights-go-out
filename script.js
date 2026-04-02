@@ -150,7 +150,7 @@ function render() {
     if (state.screen === 'check_auth') {
         const div = document.createElement('div');
         div.className = 'fade-in start-screen';
-        div.innerHTML = `<h1 style="color: var(--text-muted); font-size: 2rem;">Loading Archives...</h1>`;
+        div.innerHTML = `<h1 style="color: var(--text-muted); font-size: 2rem;">Loading,please wait.</h1>`;
         App.appendChild(div);
     } else if (state.screen === 'start') {
         App.appendChild(createStartScreen());
