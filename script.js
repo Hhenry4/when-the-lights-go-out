@@ -11,7 +11,7 @@ const API_BASE = (() => {
 })();
 
 const state = {
-    version: '2.5-ACHIEVEMENTS',
+    version: ' VERSION 2.5',
     screen: 'check_auth',
     currentMysteryIndex: 0,
     sessionId: null, // Server-side session identifier
