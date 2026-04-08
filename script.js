@@ -203,7 +203,7 @@ function render() {
     if (state.screen === 'check_auth') {
         const div = document.createElement('div');
         div.className = 'fade-in start-screen';
-        div.innerHTML = `<h1 style="color: var(--text-muted); font-size: 2rem;">Loading Archives...</h1>`;
+        div.innerHTML = `<h1 style="color: var(--text-muted); font-size: 2rem;">Loading...</h1>`;
         App.appendChild(div);
     } else if (state.screen === 'start') {
         App.appendChild(createStartScreen());
@@ -650,7 +650,7 @@ function showAchievements() {
         <div class="achievements-content glass-panel">
             <h2 class="modal-title">Detective Achievements</h2>
             <div class="achievements-progress">
-                <div class="progress-info">Solved Archives: ${unlockedCount}/${totalCount}</div>
+                <div class="progress-info">Acheivments: ${unlockedCount}/${totalCount}</div>
                 <div class="progress-bar-bg">
                     <div class="progress-bar-fill" style="width: ${(unlockedCount / totalCount) * 100}%"></div>
                 </div>
@@ -674,7 +674,7 @@ function showAchievements() {
                 }).join('')}
             </div>
 
-            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px;" onclick="this.parentElement.parentElement.remove()">Close Archives</button>
+            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px;" onclick="this.parentElement.parentElement.remove()">Close</button>
         </div>
     `;
     document.body.appendChild(modal);
@@ -694,7 +694,7 @@ function showLeaderboard() {
                 <div class="lb-stats-header">Performance</div>
             </div>
             <div id="leaderboard-list">Loading real-time rankings...</div>
-            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px; font-family: 'Inter', sans-serif;" onclick="this.parentElement.parentElement.remove()">Close Archives</button>
+            <button class="primary-btn" style="margin-top: 20px; width: 100%; border-radius: 12px; font-family: 'Inter', sans-serif;" onclick="this.parentElement.parentElement.remove()">Close</button>
         </div>
     `;
     document.body.appendChild(modal);
